@@ -1,0 +1,131 @@
+///////////////////////////////////
+////COMMON CSS SHARED BY ALL PAGES
+///////////////////////////////////
+
+////////////
+//COLOURS
+////////////
+@black: #000;
+@white: #fcfff5;
+@light-green: #d1dbbd;
+@med-green: #91aa9d;
+@med-blue: #3e606f;
+@dark-blue: #193441;
+
+////////////
+////MIXINS
+////////////
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.shadow (@hOffset: inset, @vOffset: 0px, @blur: 0px, @spread: 5px, @color: #000) {
+  -moz-box-shadow: @hOffset @vOffset @blur @spread @color;
+  -webkit-box-shadow: @hOffset @vOffset @blur @spread @color;
+  box-shadow: @hOffset @vOffset @blur @spread @color;
+}
+
+.textShadow (@X: 1px, @Y: 1px, @blur: 3px, @color: #888) {
+  text-shadow: @X @Y @blur @color;
+}
+
+.transparentBG (@color, @alpha) {
+  background-color: rgba(red(@color), green(@color), blue(@color), @alpha);
+}
+
+////////////
+//FONTS
+////////////
+.header () {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.paragraph () {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.codeText () {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+//////////////
+////GLOBAL
+//////////////
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: @dark-blue;
+  height: 100%;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  color: @white;
+}
+
+#mainHeader {
+  padding: 5px;
+  background-color: @med-blue;
+}
+
+#mainHeader h1 {
+  .textShadow(1px, 1px, 3px, @black);
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/////////////
+///GRID
+////////////
+#grid {
+  position:relative;
+  width: 960px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+#grid div {
+  .rounded-corners(7px);
+  background-color: #9a620c;
+  margin: 0;
+  padding: 5px;
+}
+
+#grid h3 {
+  .textShadow(1px, 1px, 3px, @black);
+  padding: 5px;
+}
+
+#grid ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#grid li {
+  .rounded-corners(7px);
+  background-color: @light-green;
+  .codeText();
+  margin: 5px;
+  padding: 5px;
+}
