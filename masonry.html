@@ -21,12 +21,13 @@
         <![endif]-->
         
         <header id="mainHeader">
-            <h1>Masonry Showdown - </h1>
+            <h1>Masonry Showdown - Masonry.js</h1>
+            <a href="http://masonry.desandro.com/">Visit Site</a>
         </header>
 
         <section id="grid">
 
-            <div id="sectionOne">
+            <div id="sectionOne" class="item">
                 <h3>Section One</h3>
                 <ul>
                     <li>Item One</li>
@@ -37,7 +38,7 @@
                 </ul>
             </div>
 
-            <div id="sectionTwo">
+            <div id="sectionTwo" class="item">
                 <h3>Section Two</h3>
                 <ul>
                     <li>Item One</li>
@@ -50,7 +51,7 @@
                 </ul>
             </div>
 
-            <div id="sectionThree">
+            <div id="sectionThree" class="item">
                 <h3>Section Three</h3>
                 <ul>
                     <li>Item One</li>
@@ -59,7 +60,7 @@
                 </ul>
             </div>
 
-            <div id="sectionFour">
+            <div id="sectionFour" class="item">
                 <h3>Section Four</h3>
                 <ul>
                     <li>Item One</li>
@@ -69,7 +70,7 @@
                 </ul>
             </div>
 
-            <div id="sectionFive">
+            <div id="sectionFive" class="item">
                 <h3>Section Five</h3>
                 <ul>
                     <li>Item One</li>
@@ -83,7 +84,7 @@
                 </ul>
             </div>
 
-            <div id="sectionSix">
+            <div id="sectionSix" class="item">
                 <h3>Section Six</h3>
                 <ul>
                     <li>Item One</li>
@@ -91,7 +92,7 @@
                 </ul>
             </div>
 
-            <div id="sectionSeven">
+            <div id="sectionSeven" class="item">
                 <h3>Section Seven</h3>
                 <ul>
                     <li>Item One</li>
@@ -102,7 +103,7 @@
                 </ul>
             </div>
 
-            <div id="sectionEight">
+            <div id="sectionEight" class="item">
                 <h3>Section Eight</h3>
                 <ul>
                     <li>Item One</li>
@@ -116,5 +117,26 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="js/masonry/masonry.pkgd.min.js"></script>
+        <style>
+            #grid {
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+            #grid .item {
+                width: 220px;
+                margin-bottom: 10px;
+            }
+        </style>
+        <script>
+            var container = document.getElementById("grid");
+
+            var msnry = new Masonry( container, {
+                // options
+                itemSelector: '.item',
+                gutter: 10
+            });
+
+        </script>
     </body>
 </html>
