@@ -15,11 +15,41 @@ p {
   color: #fcfff5;
 }
 #mainHeader {
+  -moz-box-shadow: inset 0px 0px 5px #000000;
+  -webkit-box-shadow: inset 0px 0px 5px #000000;
+  box-shadow: inset 0px 0px 5px #000000;
   padding: 5px;
-  background-color: #3e606f;
+  background-color: #9a620c;
 }
 #mainHeader h1 {
-  text-shadow: 1px 1px 3px #000000;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 40px;
+  text-shadow: 1px 1px 2px #3e606f;
+  margin-left: 5px;
+  color: #193441;
+}
+#mainHeader p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #193441;
+  margin-left: 25px;
+  color: #fcfff5;
+}
+#mainHeader a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #3e606f;
+  text-decoration: none;
+  margin-left: 25px;
+  color: #193441;
+  font-weight: 800;
+}
+#mainHeader a:hover {
+  color: #3e606f;
 }
 .clearfix:before,
 .clearfix:after {

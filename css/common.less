@@ -11,6 +11,7 @@
 @med-green: #91aa9d;
 @med-blue: #3e606f;
 @dark-blue: #193441;
+@gold: #9a620c;
 
 ////////////
 ////MIXINS
@@ -39,12 +40,14 @@
 ////////////
 //FONTS
 ////////////
-.header () {
+.header (@size: 25px) {
   font-family: Verdana, Geneva, sans-serif;
+  font-size: @size;
 }
 
-.paragraph () {
+.paragraph (@size: 18px) {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: @size;
   font-weight: 500;
   letter-spacing: 0.05em;
 }
@@ -72,12 +75,36 @@ h1, h2, h3, h4, p {
 }
 
 #mainHeader {
+  .shadow();
   padding: 5px;
-  background-color: @med-blue;
+  background-color: @gold;
 }
 
 #mainHeader h1 {
-  .textShadow(1px, 1px, 3px, @black);
+  .header(40px);
+  .textShadow(1px, 1px, 2px, @med-blue);
+  margin-left: 5px;
+  color: @dark-blue;
+}
+
+#mainHeader p {
+  .paragraph(20px);
+  .textShadow(1px, 1px, 1px, @dark-blue);
+  margin-left: 25px;
+  color: @white;
+}
+
+#mainHeader a {
+  .paragraph(18px);
+  .textShadow(1px, 1px, 1px, @med-blue);
+  text-decoration: none;
+  margin-left: 25px;
+  color: @dark-blue;
+  font-weight: 800;
+}
+
+#mainHeader a:hover {
+  color: @med-blue;
 }
 
 .clearfix:before,
@@ -108,7 +135,7 @@ h1, h2, h3, h4, p {
 
 #grid div {
   .rounded-corners(7px);
-  background-color: #9a620c;
+  background-color: @gold;
   margin: 0;
   padding: 5px;
 }
