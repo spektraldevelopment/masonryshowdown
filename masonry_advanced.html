@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/common.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header id="mainHeader">
+            <h1>Masonry Showdown - masonry.js</h1>
+            <p>A basic 4 column layout with the grid having a width of 960px.</p>
+            <a href="http://masonry.desandro.com/">Visit Site</a>
+        </header>
+
+        <section id="grid">
+            <div id="sectionOne" class="item">
+                <h3>Section One</h3>
+                <ul>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                    <li>Item Four</li>
+                    <li>Item Five</li>
+                </ul>
+            </div>
+
+            <div id="sectionTwo" class="item">
+                <h3>Section Two</h3>
+                <ul>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                    <li>Item Four</li>
+                    <li>Item Five</li>
+                    <li>Item Six</li>
+                    <li>Item Seven</li>
+                </ul>
+            </div>
+
+            <div id="sectionThree" class="item">
+                <h3>Section Three</h3>
+                <ul>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                </ul>
+            </div>
+
+            <div id="sectionFour" class="item">
+                <h3>Section Four</h3>
+                <ul>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                    <li>Item Four</li>
+                </ul>
+            </div>
+
+            <div id="sectionFive" class="item">
+                <h3>Section Five</h3>
+                <ul>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                    <li>Item Four</li>
+                    <li>Item Five</li>
+                    <li>Item Six</li>
+                    <li>Item Seven</li>
+                    <li>Item Eight</li>
+                </ul>
+            </div>
+
+            <div id="sectionSix" class="item">
+                <h3>Section Six</h3>
+                <ul>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                </ul>
+            </div>
+
+            <div id="sectionSeven" class="item">
+                <h3>Section Seven</h3>
+                <ul>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                    <li>Item Four</li>
+                    <li>Item Five</li>
+                </ul>
+            </div>
+
+            <div id="sectionEight" class="item">
+                <h3>Section Eight</h3>
+                <ul>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                    <li>Item Four</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="js/masonry/masonry.pkgd.min.js"></script>
+        <style>
+            #grid {
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+
+            #grid .item {
+                width: 220px;
+                margin-bottom: 10px;
+            }
+        </style>
+        <script>
+            var container = document.getElementById("grid");
+
+            var msnry = new Masonry( container, {
+                // options
+                itemSelector: '.item',
+                gutter: 10
+            });
+
+        </script>
+    </body>
+</html>
