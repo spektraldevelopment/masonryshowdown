@@ -37,6 +37,22 @@
   background-color: rgba(red(@color), green(@color), blue(@color), @alpha);
 }
 
+.clearFix () {
+  .clearfix:before,
+  .clearfix:after {
+    content: " ";
+    display: table;
+  }
+
+  .clearfix:after {
+    clear: both;
+  }
+
+  .clearfix {
+    *zoom: 1;
+  }
+}
+
 ////////////
 //FONTS
 ////////////
@@ -76,27 +92,33 @@ h1, h2, h3, h4, p {
 
 #mainHeader {
   .shadow();
-  padding: 5px;
-  background-color: @gold;
+  .clearFix();
+  padding: 5px 25px;
+  background-color: @med-blue;
 }
 
 #mainHeader h1 {
   .header(40px);
-  .textShadow(1px, 1px, 2px, @med-blue);
-  margin-left: 5px;
-  color: @dark-blue;
+  .textShadow(1px, 1px, 2px, @dark-blue);
+  position: relative;
+  float:left;
+  color: @med-green;
 }
 
 #mainHeader p {
   .paragraph(20px);
   .textShadow(1px, 1px, 1px, @dark-blue);
-  margin-left: 25px;
+  position: relative;
+  float:left;
+  margin-left: 3px;
   color: @white;
 }
 
 #mainHeader a {
   .paragraph(18px);
   .textShadow(1px, 1px, 1px, @med-blue);
+  position: relative;
+  float:right;
   text-decoration: none;
   margin-left: 25px;
   color: @dark-blue;
@@ -105,20 +127,6 @@ h1, h2, h3, h4, p {
 
 #mainHeader a:hover {
   color: @med-blue;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
 }
 
 /////////////
@@ -135,7 +143,7 @@ h1, h2, h3, h4, p {
 
 #grid div {
   .rounded-corners(7px);
-  background-color: @gold;
+  background-color: @med-green;
   margin: 0;
   padding: 5px;
 }
