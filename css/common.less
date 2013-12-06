@@ -38,18 +38,15 @@
 }
 
 .clearFix () {
-  .clearfix:before,
-  .clearfix:after {
-    content: " ";
+  *zoom: 1; // For IE 6/7 (trigger hasLayout)
+
+  &:before, &:after {
+    content: "";
     display: table;
   }
 
-  .clearfix:after {
-    clear: both;
-  }
-
-  .clearfix {
-    *zoom: 1;
+  &:after {
+    clear:both;
   }
 }
 
@@ -93,6 +90,7 @@ h1, h2, h3, h4, p {
 #mainHeader {
   .shadow();
   .clearFix();
+  display: block;
   padding: 5px 25px;
   background-color: @med-blue;
 }
@@ -100,16 +98,19 @@ h1, h2, h3, h4, p {
 #mainHeader h1 {
   .header(40px);
   .textShadow(1px, 1px, 2px, @dark-blue);
+  display:block;
+  width: 70%;
   position: relative;
-  float:left;
+  float: left;
   color: @med-green;
 }
 
 #mainHeader p {
   .paragraph(20px);
   .textShadow(1px, 1px, 1px, @dark-blue);
+  display: block;
   position: relative;
-  float:left;
+  float: left;
   margin-left: 3px;
   color: @white;
 }
@@ -117,11 +118,15 @@ h1, h2, h3, h4, p {
 #mainHeader a {
   .paragraph(18px);
   .textShadow(1px, 1px, 1px, @med-blue);
+  .shadow();
+  .rounded-corners(7px);
   position: relative;
   float:right;
+  margin-top: 10px;
   text-decoration: none;
-  margin-left: 25px;
-  color: @dark-blue;
+  padding: 8px;
+  color: @white;
+  background-color: @dark-blue;
   font-weight: 800;
 }
 
