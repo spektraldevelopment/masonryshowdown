@@ -88,6 +88,7 @@ p {
   margin: 20px auto;
   padding: 0;
   background-color: #3e606f;
+  visibility: hidden;
 }
 #grid div {
   -webkit-border-radius: 5px;

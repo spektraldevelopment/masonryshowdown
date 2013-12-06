@@ -135,9 +135,16 @@
             var msnry = new Masonry( container, {
                 // options
                 itemSelector: '.item',
-                gutter: 10
+                gutter: 10,
+                isInitLayout: false
             });
 
+            msnry.on( "layoutComplete", function() {
+                container.setAttribute("style", "visibility:visible");
+                console.log("layout is complete");
+            });
+
+            msnry.layout();
         </script>
     </body>
 </html>
