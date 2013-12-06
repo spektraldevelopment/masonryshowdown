@@ -13,6 +13,13 @@
 @dark-blue: #193441;
 @gold: #9a620c;
 
+@colourOne: #484a47;
+@colourTwo: #cbd99e;
+@colourThree: #ecebca;
+@colourFour: #81afb5;
+@colourFive: #353129;
+
+
 ////////////
 ////MIXINS
 ////////////
@@ -77,7 +84,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: @dark-blue;
+  background-color: @colourOne;
   height: 100%;
 }
 
@@ -102,7 +109,7 @@ h1, h2, h3, h4, p {
   width: 70%;
   position: relative;
   float: left;
-  color: @med-green;
+  color: @colourFour;
 }
 
 #mainHeader p {
@@ -119,7 +126,7 @@ h1, h2, h3, h4, p {
   .paragraph(18px);
   .textShadow(1px, 1px, 1px, @med-blue);
   .shadow();
-  .rounded-corners(7px);
+  .rounded-corners(5px);
   position: relative;
   float:right;
   margin-top: 10px;
@@ -131,14 +138,14 @@ h1, h2, h3, h4, p {
 }
 
 #mainHeader a:hover {
-  color: @med-blue;
+  color: @colourFour;
 }
 
 /////////////
 ///GRID
 ////////////
 #grid {
-  .rounded-corners(7px);
+  .rounded-corners(5px);
   position:relative;
   width: 960px;
   margin: 20px auto;
@@ -147,8 +154,8 @@ h1, h2, h3, h4, p {
 }
 
 #grid div {
-  .rounded-corners(7px);
-  background-color: @med-green;
+  .rounded-corners(5px);
+  background-color: @colourFive;
   margin: 0;
   padding: 5px;
 }
@@ -165,8 +172,8 @@ h1, h2, h3, h4, p {
 }
 
 #grid li {
-  .rounded-corners(7px);
-  background-color: @light-green;
+  .rounded-corners(5px);
+  background-color: @colourFour;
   .codeText();
   margin: 5px;
   padding: 5px;

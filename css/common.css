@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #193441;
+  background-color: #484a47;
   height: 100%;
 }
 h1,
@@ -39,7 +39,7 @@ p {
   width: 70%;
   position: relative;
   float: left;
-  color: #91aa9d;
+  color: #81afb5;
 }
 #mainHeader p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -62,10 +62,10 @@ p {
   -moz-box-shadow: inset 0px 0px 5px #000000;
   -webkit-box-shadow: inset 0px 0px 5px #000000;
   box-shadow: inset 0px 0px 5px #000000;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  border-radius: 7px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
   position: relative;
   float: right;
   margin-top: 10px;
@@ -76,13 +76,13 @@ p {
   font-weight: 800;
 }
 #mainHeader a:hover {
-  color: #3e606f;
+  color: #81afb5;
 }
 #grid {
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  border-radius: 7px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
   position: relative;
   width: 960px;
   margin: 20px auto;
@@ -90,11 +90,11 @@ p {
   background-color: #3e606f;
 }
 #grid div {
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  border-radius: 7px;
-  background-color: #91aa9d;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #353129;
   margin: 0;
   padding: 5px;
 }
@@ -108,11 +108,11 @@ p {
   list-style: none;
 }
 #grid li {
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  border-radius: 7px;
-  background-color: #d1dbbd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #81afb5;
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
   font-weight: bold;
