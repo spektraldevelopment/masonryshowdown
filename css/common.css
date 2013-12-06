@@ -21,7 +21,7 @@ p {
   *zoom: 1;
   display: block;
   padding: 5px 25px;
-  background-color: #3e606f;
+  background-color: #193441;
 }
 #mainHeader:before,
 #mainHeader:after {
@@ -39,7 +39,7 @@ p {
   width: 70%;
   position: relative;
   float: left;
-  color: #81afb5;
+  color: #fcfff5;
 }
 #mainHeader p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -51,7 +51,7 @@ p {
   position: relative;
   float: left;
   margin-left: 3px;
-  color: #fcfff5;
+  color: #81afb5;
 }
 #mainHeader a {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -72,7 +72,7 @@ p {
   text-decoration: none;
   padding: 8px;
   color: #fcfff5;
-  background-color: #193441;
+  background-color: #3e606f;
   font-weight: 800;
 }
 #mainHeader a:hover {
