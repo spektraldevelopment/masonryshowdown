@@ -27,6 +27,7 @@
         </header>
 
         <section id="grid">
+            <div class="gutter-size"></div>
             <div id="sectionOne" class="item">
                 <h3>Section One</h3>
                 <ul>
@@ -119,25 +120,64 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="js/masonry/masonry.pkgd.min.js"></script>
         <style>
+            #grid .gutter-size { width: 0.25%; }
+
             #grid {
-                padding-top: 10px;
-                padding-left: 10px;
+                padding-top: 1%;
+                padding-right: 0;
+                padding-left: 1%;
             }
 
             #grid .item {
-                width: 220px;
-                margin-bottom: 10px;
+                width: 20%;
+                margin-bottom: 1%;
             }
+
         </style>
         <script>
-            var container = document.getElementById("grid");
+            $( document ).ready(function() {
 
-            var msnry = new Masonry( container, {
-                // options
-                itemSelector: '.item',
-                gutter: 10
+                var
+                    container = $("#grid"),
+                    items = $(".item"),
+                    gridWidth;
+
+                var msnry = new Masonry( container[0], {
+                    // options
+                    itemSelector: '.item',
+                    gutter: ".gutter-size",
+                    isInitLayout: false
+                });
+
+                msnry.on( "layoutComplete", function() {
+                    container.css("visibility", "visible");
+                    console.log("layout is complete");
+                });
+
+                function setItemWidth() {
+
+                    var
+                        i, item, newWidth,
+                        colNum = msnry.cols;
+
+                    gridWidth = container.outerWidth();
+
+                    newWidth = gridWidth / colNum;
+
+                    msnry.columnWidth = newWidth;
+
+                    console.log("newWidth: " + newWidth);
+
+                    for (i = 0; i < items.length; i += 1) {
+
+                        item = $(items[i]);
+                        item.css("width", newWidth);
+                    }
+                }
+
+                setItemWidth();
+                msnry.layout();
             });
-
         </script>
     </body>
 </html>

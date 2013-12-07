@@ -79,6 +79,7 @@ p {
   color: #81afb5;
 }
 #grid {
+  *zoom: 1;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -89,6 +90,14 @@ p {
   padding: 0;
   background-color: #3e606f;
   visibility: hidden;
+}
+#grid:before,
+#grid:after {
+  content: "";
+  display: table;
+}
+#grid:after {
+  clear: both;
 }
 #grid div {
   -webkit-border-radius: 5px;
