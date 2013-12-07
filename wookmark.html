@@ -21,7 +21,9 @@
         <![endif]-->
         
         <header id="mainHeader">
-            <h1>Masonry Showdown - </h1>
+            <h1>Masonry Showdown - Wookmark</h1>
+            <a href="http://www.wookmark.com/jquery-plugin">Visit Site</a>
+            <p>A basic 4 column layout with the grid having a width of 960px.</p>
         </header>
 
         <section id="grid">
@@ -50,7 +52,7 @@
                 </ul>
             </div>
 
-            <div id="sectionThree"class="item">
+            <div id="sectionThree" class="item">
                 <h3>Section Three</h3>
                 <ul>
                     <li>Item One</li>
@@ -59,7 +61,7 @@
                 </ul>
             </div>
 
-            <div id="sectionFour"class="item">
+            <div id="sectionFour" class="item">
                 <h3>Section Four</h3>
                 <ul>
                     <li>Item One</li>
@@ -69,7 +71,7 @@
                 </ul>
             </div>
 
-            <div id="sectionFive"class="item">
+            <div id="sectionFive" class="item">
                 <h3>Section Five</h3>
                 <ul>
                     <li>Item One</li>
@@ -114,16 +116,39 @@
 
         </section>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="js/wookmark/jquery.wookmark.min.js"></script>
         <style>
+
             #grid {
                 visibility: visible;
+                width: 80%;
             }
+
+            #grid .item {
+                width: 25%;
+
+            }
+
         </style>
         <script>
             $( document ).ready(function() {
+                var
+                        container = $("#grid"),
+                        items = $(".item");
 
+                items.wookmark({
+                    align: "center",
+                    autoResize: true, // This will auto-update the layout when the browser window is resized.
+                    container: container, // Optional, used for some extra CSS styling
+                    offset: 30, // Optional, the distance between grid items
+                    outerOffset: 10, // Optional, the distance to the containers border
+                    itemWidth: "25%", // Optional, the width of a grid item
+                    flexibleWidth: true,
+                    fillEmptySpace: false
+
+                });
             });
         </script>
     </body>
