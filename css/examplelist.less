@@ -1,0 +1,144 @@
+///////////////////////////////////
+////COMMON CSS SHARED BY ALL PAGES
+///////////////////////////////////
+
+////////////
+//COLOURS
+////////////
+@black: #000;
+@white: #fcfff5;
+@light-green: #d1dbbd;
+@med-green: #91aa9d;
+@med-blue: #3e606f;
+@dark-blue: #193441;
+@gold: #9a620c;
+
+@colourOne: #484a47;
+@colourTwo: #cbd99e;
+@colourThree: #ecebca;
+@colourFour: #81afb5;
+@colourFive: #353129;
+
+
+////////////
+////MIXINS
+////////////
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.shadow (@hOffset: inset, @vOffset: 0px, @blur: 0px, @spread: 5px, @color: #000) {
+  -moz-box-shadow: @hOffset @vOffset @blur @spread @color;
+  -webkit-box-shadow: @hOffset @vOffset @blur @spread @color;
+  box-shadow: @hOffset @vOffset @blur @spread @color;
+}
+
+.textShadow (@X: 1px, @Y: 1px, @blur: 3px, @color: #888) {
+  text-shadow: @X @Y @blur @color;
+}
+
+.transparentBG (@color, @alpha) {
+  background-color: rgba(red(@color), green(@color), blue(@color), @alpha);
+}
+
+.clearFix () {
+  *zoom: 1; // For IE 6/7 (trigger hasLayout)
+
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear:both;
+  }
+}
+
+////////////
+//FONTS
+////////////
+.header (@size: 25px) {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: @size;
+}
+
+.paragraph (@size: 18px) {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: @size;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.codeText () {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+//////////////
+////GLOBAL
+//////////////
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: @colourFive;
+  height: 100%;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  color: @white;
+}
+
+#mainContainer {
+  .rounded-corners(5px);
+  .shadow(1px, 1px, 5px, 2px, @black);
+  margin: 50px auto;
+  padding: 10px;
+  width: 30%;
+  background-color: @dark-blue;
+}
+
+header {
+
+}
+
+header h1 {
+  .rounded-corners(5px);
+  .header(30px);
+  .textShadow(1px, 1px, 2px, @dark-blue);
+  .shadow();
+  padding: 10px;
+  //width: 75%;
+  text-align: center;
+  margin: 10px auto;
+  background-color: @med-blue;
+}
+
+ul {
+  .rounded-corners(5px);
+  .shadow();
+  padding: 10px;
+  width: 50%;
+  list-style: none;
+  position: relative;
+  margin: 10px auto;
+  background-color: @colourOne;
+}
+
+li {
+  .rounded-corners(5px);
+  .paragraph(20px);
+  .textShadow(1px, 1px, 3px, @black);
+  cursor: pointer;
+  text-align: center;
+  color: @white;
+}
+
+li:hover {
+  color: @colourFour;
+}

@@ -1,0 +1,77 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #353129;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+  color: #fcfff5;
+}
+#mainContainer {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 1px 1px 5px 2px #000000;
+  -webkit-box-shadow: 1px 1px 5px 2px #000000;
+  box-shadow: 1px 1px 5px 2px #000000;
+  margin: 50px auto;
+  padding: 10px;
+  width: 30%;
+  background-color: #193441;
+}
+header h1 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px #193441;
+  -moz-box-shadow: inset 0px 0px 5px #000000;
+  -webkit-box-shadow: inset 0px 0px 5px #000000;
+  box-shadow: inset 0px 0px 5px #000000;
+  padding: 10px;
+  text-align: center;
+  margin: 10px auto;
+  background-color: #3e606f;
+}
+ul {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: inset 0px 0px 5px #000000;
+  -webkit-box-shadow: inset 0px 0px 5px #000000;
+  box-shadow: inset 0px 0px 5px #000000;
+  padding: 10px;
+  width: 50%;
+  list-style: none;
+  position: relative;
+  margin: 10px auto;
+  background-color: #484a47;
+}
+li {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 3px #000000;
+  cursor: pointer;
+  text-align: center;
+  color: #fcfff5;
+}
+li:hover {
+  color: #81afb5;
+}
