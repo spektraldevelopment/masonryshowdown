@@ -155,28 +155,40 @@ h1, h2, h3, h4, p {
   visibility: hidden;
 }
 
-#grid div {
+div {
   .rounded-corners(5px);
   background-color: @colourFive;
   margin: 0;
   padding: 5px;
 }
 
-#grid h3 {
+h3 {
   .textShadow(1px, 1px, 3px, @black);
   padding: 5px;
 }
 
-#grid ul {
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-#grid li {
+li {
   .rounded-corners(5px);
-  background-color: @colourFour;
   .codeText();
+  background-color: @colourFour;
   margin: 5px;
   padding: 5px;
+}
+
+//Clearfix interferes with Salvattore
+#salGrid {
+  .rounded-corners(5px);
+  position:relative;
+  width: 960px;
+  height: 100%;
+  margin: 20px auto;
+  padding: 0;
+  background-color: @med-blue;
+  //visibility: hidden;
 }

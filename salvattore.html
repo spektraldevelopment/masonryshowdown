@@ -12,6 +12,37 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/common.css">
+        <style>
+
+            #salGrid {
+                visibility: visible;
+            }
+
+            #salGrid[data-columns]::before {
+                content: '4 .column.size-1of4';
+            }
+
+            .column {
+                float: left;
+                margin: 10px;
+                background-color: transparent;
+            }
+            .size-1of4 {
+                width: 220px;
+
+            }
+            .size-1of3 {
+                width: 33.333%;
+            }
+            .size-1of2 {
+                width: 50%;
+            }
+
+            [data-columns]::before {
+                display: none;
+            }
+
+        </style>
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
@@ -21,14 +52,14 @@
         <![endif]-->
         
         <header id="mainHeader">
-            <h1>Masonry Showdown - masonry.js</h1>
-            <p>An advanced layout based purely on width percentages.</p>
-            <a href="http://masonry.desandro.com/">Visit Site</a>
+            <h1>Masonry Showdown - Salvattore</h1>
+            <a href="http://www.salvattore.com/">Visit Site</a>
+            <p>A basic 4 column layout with the grid having a width of 960px.</p>
         </header>
 
-        <section id="grid">
-            <div class="gutter-size"></div>
-            <div id="sectionOne" class="item">
+        <section id="salGrid" data-columns>
+
+            <div id="sectionOne" class="column size-1of4">
                 <h3>Section One</h3>
                 <ul>
                     <li>Item One</li>
@@ -39,7 +70,7 @@
                 </ul>
             </div>
 
-            <div id="sectionTwo" class="item">
+            <div id="sectionTwo" class="column size-1of4">
                 <h3>Section Two</h3>
                 <ul>
                     <li>Item One</li>
@@ -52,7 +83,7 @@
                 </ul>
             </div>
 
-            <div id="sectionThree" class="item">
+            <div id="sectionThree"class="column size-1of4">
                 <h3>Section Three</h3>
                 <ul>
                     <li>Item One</li>
@@ -61,7 +92,7 @@
                 </ul>
             </div>
 
-            <div id="sectionFour" class="item">
+            <div id="sectionFour"class="column size-1of4">
                 <h3>Section Four</h3>
                 <ul>
                     <li>Item One</li>
@@ -71,7 +102,7 @@
                 </ul>
             </div>
 
-            <div id="sectionFive" class="item">
+            <div id="sectionFive"class="column size-1of4">
                 <h3>Section Five</h3>
                 <ul>
                     <li>Item One</li>
@@ -85,7 +116,7 @@
                 </ul>
             </div>
 
-            <div id="sectionSix" class="item">
+            <div id="sectionSix" class="column size-1of4">
                 <h3>Section Six</h3>
                 <ul>
                     <li>Item One</li>
@@ -93,7 +124,7 @@
                 </ul>
             </div>
 
-            <div id="sectionSeven" class="item">
+            <div id="sectionSeven" class="column size-1of4">
                 <h3>Section Seven</h3>
                 <ul>
                     <li>Item One</li>
@@ -104,7 +135,7 @@
                 </ul>
             </div>
 
-            <div id="sectionEight" class="item">
+            <div id="sectionEight" class="column size-1of4">
                 <h3>Section Eight</h3>
                 <ul>
                     <li>Item One</li>
@@ -115,68 +146,12 @@
             </div>
 
         </section>
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-        <script src="js/masonry/masonry.pkgd.min.js"></script>
-        <style>
-            #grid .gutter-size { width: 0.25%; }
-
-            #grid {
-                padding-top: 1%;
-                padding-right: 0;
-                padding-left: 1%;
-            }
-
-            #grid .item {
-                width: 20%;
-                margin-bottom: 1%;
-            }
-
-        </style>
+        <script src="js/salvattore/salvattore.min.js"></script>
         <script>
             $( document ).ready(function() {
 
-                var
-                    container = $("#grid"),
-                    items = $(".item"),
-                    gridWidth;
-
-                var msnry = new Masonry( container[0], {
-                    // options
-                    itemSelector: '.item',
-                    gutter: ".gutter-size",
-                    isInitLayout: false
-                });
-
-                msnry.on( "layoutComplete", function() {
-                    container.css("visibility", "visible");
-                    console.log("layout is complete");
-                });
-
-                function setItemWidth() {
-
-                    var
-                        i, item, newWidth,
-                        colNum = msnry.cols;
-
-                    gridWidth = container.outerWidth();
-
-                    newWidth = gridWidth / colNum;
-
-                    msnry.columnWidth = newWidth;
-
-                    console.log("newWidth: " + newWidth);
-
-                    for (i = 0; i < items.length; i += 1) {
-
-                        item = $(items[i]);
-                        item.css("width", newWidth);
-                    }
-                }
-
-                setItemWidth();
-                msnry.layout();
             });
         </script>
     </body>
